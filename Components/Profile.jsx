@@ -15,7 +15,8 @@ const Profile = ({
     const getShipmentData = getShipmentCount();
 
     return async () => {
-      const allData = await getShipmentData();
+
+      const allData = await getShipmentData;
       setCount(allData);
     };
   });

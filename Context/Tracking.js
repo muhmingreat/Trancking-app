@@ -77,7 +77,9 @@ export const TrackingProvider = ({children}) => {
 
                 const provider = new ethers.providers.JsonRpcProvider();
                 const contract =  fetchContract(provider);
-                const shipmentCount = await contract.getShipmentCount(accounts[0]);
+                const shipmentCount = await contract.getShipmentCount(
+                  accounts[0]
+                );
                    
                 return shipmentCount.toNumber();
             }catch(error){
@@ -213,17 +215,20 @@ export const TrackingProvider = ({children}) => {
     },[]);
 
     return (
-         <TrackingContext.Provider value={{
-            createShipment,
-            getAllShipment,
-            startShipment,
-            getShipmentCount,
-            getshipment,
-            completeShipment,
-            connectWallet,
-            DAppName,
-            currentUser }}>
-
-        {children}</TrackingContext.Provider>
+      <TrackingContext.Provider
+        value={{
+          createShipment,
+          getAllShipment,
+          startShipment,
+          getShipmentCount,
+          getshipment,
+          completeShipment,
+          connectWallet,
+          DAppName,
+          currentUser,
+        }}
+      >
+        {children}
+      </TrackingContext.Provider>
     );
 };

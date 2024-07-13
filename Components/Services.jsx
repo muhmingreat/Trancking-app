@@ -25,7 +25,7 @@ const Services = ({
      } else if(text === 3) {
        setStartModal(true);
     } else if (text === 4) {
-        setOpenProfile(true);
+      setOpenProfile(true);
      }
   };
 
@@ -37,7 +37,7 @@ const Services = ({
         md:grid-cols-3">
           {team.map((item, i)=> (
            <li key={i} >
-            <div onClick={() =>openModalBox(i + 1)}
+            <div onClick={() => openModalBox(i + 1)}
                  className='w-full h-60 sm:h-52 md:h-56'>
                 <Image src={item.avatar}
                 alt={item} className='w-full
