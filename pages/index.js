@@ -39,7 +39,7 @@ const index = () => {
    return (
      <div>
        <Services
-         setOPenProfile={setOpenProfile}
+         setOpenProfile={setOpenProfile}
          setCompleteModal={setCompleteModal}
          setGetModal={setGetModal}
          setStartModal={setStartModal}

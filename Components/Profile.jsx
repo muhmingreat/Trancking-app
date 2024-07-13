@@ -1,6 +1,7 @@
 import {useState,useEffect} from "react";
 import Image from 'next/image'
  import images from '../Images/index'
+import Str1 from "./SVG/Str1";
 
 const Profile = ({
   openProfile,
